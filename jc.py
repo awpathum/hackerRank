@@ -1,38 +1,36 @@
-print('Enter number of clouds :')
+
+# number of elements 
+# n = int(input("Enter number of elements : ")) 
+
+# a = list(map(int,input("\nEnter the numbers : ").strip().split()))[:n] 
+  
+# print("\nList is - ", a) 
+
+#print("Enter the string : ")
+s = input()
+#print("Enter index : ")
 n = int(input())
-print('Enter cloud array :')
+#count = 0
 
 
-cloud_list = list(map(int, input().split()))
-# for x in range(c):
-#     z = input()
-#     cloud_list.append(z)
-
-print(cloud_list)
-
-curCloud = 0
-
-for c in range(n):
-    if c <= n-2:
-        if cloud_list[c + 2] == 0:
-            curCloud = c + 2
-        elif c <= n-1:
-            if cloud_list[c + 1] == 0:
-                curCloud = c + 1
-print(curCloud)
-
-# for c in range(n):
-#     print(c)
-#     if c <= n-2:
-#         print("*")
-#            if cloud_list[c + 2] == 0:
-#                 print("**")
-#                 curCloud = c + 2
-#             elif c <= n-1:
-#                 print("***")
-#             if cloud_list[c + 1] == 0 and cloud_list[c + 2] <= n:
-#                 print("****")
-#                 curCloud = c + 1
+def findChar(s,e):
+    c = 0
+    p =0
+    for i in range(len(s)):
+        if(s.find('a',p,len(s)) != -1):
+            c = c + 1
+            i = p
+    return c
+        
 
 
-# print(curCloud)
+
+
+if(len(s) >= n):
+    print(s.find('a',0,len(s)))
+else:
+    while len(s) < n:
+        s.join(s)
+    
+
+
